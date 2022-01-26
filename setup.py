@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from setuptools import find_packages, setup
-import os, sys
 
 NAME = "msvc"
 DESCRIPTION = "multilingual speech valence classifier."
@@ -21,6 +20,3 @@ setup(
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     include_package_data=True,
 )
-
-# add current working directory to beginning of PATH
-sys.path.insert(0, os.path.dirname(__file__))

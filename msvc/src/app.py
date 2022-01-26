@@ -10,7 +10,7 @@ import streamlit as st
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
 
 # utility
-import queue
+import os, sys, queue
 
 # audio preprocessing & featurization
 from msvc.src.features.featurize import featurize
@@ -21,6 +21,11 @@ from pydub import AudioSegment
 # inference and visualization
 from msvc.src.models.load_classifier import load_classifier
 from msvc.src.visualization.visualize import visualize
+
+# add current working directory to beginning of PATH
+sys.path.insert(0, os.path.dirname(__file__))
+del os
+del sys
 
 FIRST_LOAD: Dict[str, Any] = {
     "prediction": None,
