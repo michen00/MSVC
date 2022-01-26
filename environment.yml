@@ -308,7 +308,7 @@ dependencies:
   - tensorboard-data-server=0.6.0
   - tensorboard-plugin-wit=1.8.1
   - tensorflow==2.3.0
-  - tensorflow-base>=2.3.0
+  - tensorflow-base==2.3.0
   - tensorflow-estimator>=2.3.0
   - tensorflow-hub=0.12.0
   - termcolor=1.1.0
