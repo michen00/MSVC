@@ -1,0 +1,76 @@
+<<<<<<< HEAD
+matrix:
+  fast_finish: true
+  include:
+      name: MSVC
+      language: python
+      python: "3.8.12"
+      before_install:
+        - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+        - bash miniconda.sh -b -p $HOME/miniconda
+        - source "$HOME/miniconda/etc/profile.d/conda.sh"
+        - hash -r
+        - conda config --set changeps1 no
+        - conda update -q conda -c conda-forge -y
+        - wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+        - eval "$(./bin/micromamba shell hook -s posix)"
+        - sh
+        - ./bin/micromamba shell init -s bash -p ~/micromamba
+        - exit
+        - source ~/.bashrc
+        - micromamba env create -f environment.yml -y
+        - micromamba activate msvc_env_mm
+        - PATH=$(pwd):$PATH
+      install:
+        - python -m pip install -e .
+        - conda install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
+      script:
+        - python --version
+        - python -m pytest --cov=msvc/src msvc/tests --mpl
+      after_success:
+        - codecov
+        - deactivate
+=======
+matrix:
+  fast_finish: true
+  include:
+    - name: MSVC
+      os: windows
+      language: shell
+      env:
+        - 'PATH=/c/Python38:/c/Python38/Scripts:$PATH'
+      python:
+        - "3.8.12"
+      before_install:
+        - echo $PATH
+        - choco install python3 --version=3.8.10
+        - python -m pip install --upgrade pip wheel
+        - export MINICONDA_PATH=$HOME/miniconda;
+        - export MINICONDA_PATH_WIN=`cygpath --windows $MINICONDA_PATH`;
+        - export MINICONDA_SUB_PATH=$MINICONDA_PATH/Scripts;
+        - export MINICONDA_LIB_BIN_PATH=$MINICONDA_PATH/Library/bin;
+        - choco install openssl.light;
+        - echo $PATH
+        - choco install miniconda3 --params="'/JustMe /AddToPath:1 /D:$MINICONDA_PATH_WIN'";
+        - echo $PATH
+        - choco install ffmpeg --version=4.2.3 --params="'/JustMe /AddToPath:1'"
+        - echo $PATH
+        # - export PATH="$(pwd):$MINICONDA_PATH:$MINICONDA_SUB_PATH:$MINICONDA_LIB_BIN_PATH:$PATH";
+        - export PATH="$MINICONDA_PATH:$MINICONDA_SUB_PATH:$MINICONDA_LIB_BIN_PATH:$PATH";
+        - echo $PATH
+        - source $MINICONDA_PATH/etc/profile.d/conda.sh;
+        - hash -r;
+        - conda activate base
+        - conda update conda -c conda-forge -y
+        - conda remove --name msvc_env --all -y
+        - conda env create -f environment.yml
+        - conda activate msvc_env
+        - conda install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
+      install: python -m pip install -e .
+      script:
+        - python --version
+        - python -m pytest --cov=msvc/src msvc/tests --mpl
+      after_success:
+        - codecov
+        - deactivate
+>>>>>>> 7653142f3135c6475adc055d5424e8cba0e383ef

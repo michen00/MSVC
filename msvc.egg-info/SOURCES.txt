@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+msvc.egg-info/PKG-INFO
+msvc.egg-info/SOURCES.txt
+msvc.egg-info/dependency_links.txt
+msvc.egg-info/top_level.txt
