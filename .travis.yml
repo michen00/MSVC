@@ -13,9 +13,9 @@ matrix:
         - conda update -q conda -c conda-forge -y
         - wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
         - eval "$(./bin/micromamba shell hook -s posix)"
-        - sh
-        - ./bin/micromamba shell init -s bash -p ~/micromamba
-        - exit
+        # - sh
+        # - ./bin/micromamba shell init -s bash -p ~/micromamba
+        # - exit
         - source ~/.bashrc
         - micromamba env create -f environment.yml -y
         - micromamba activate msvc_env_mm
