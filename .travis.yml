@@ -1,9 +1,12 @@
-matrix:
+os: linux
+dist: focal
+language: python
+name: MSVC
+python: "3.8.12"
+
+jobs:
   fast_finish: true
   include:
-      name: MSVC
-      language: python
-      python: "3.8.12"
       before_install:
         - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
         - bash miniconda.sh -b -p $HOME/miniconda
@@ -22,7 +25,7 @@ matrix:
         - PATH=$(pwd):$PATH
       install:
         - python -m pip install -e .
-        - conda install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
+        - micromamba install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
       script:
         - python --version
         - python -m pytest --cov=msvc/src msvc/tests --mpl
