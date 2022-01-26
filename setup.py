@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from setuptools import find_packages, setup
+import os, sys
 
 NAME = "msvc"
 DESCRIPTION = "multilingual speech valence classifier."
@@ -9,6 +10,7 @@ AUTHOR = "Michael I Chen"
 VERSION = "0.1.0"
 # Requirements are handled by `conda env create -f environment.yml`
 
+# adapted from https://github.com/navdeep-G/setup.py/blob/master/setup.py
 setup(
     name=NAME,
     version=VERSION,
@@ -20,4 +22,5 @@ setup(
     include_package_data=True,
 )
 
-# adapted from https://github.com/navdeep-G/setup.py/blob/master/setup.py
+# add current working directory to beginning of PATH
+sys.path.insert(0, os.path.dirname(__file__))
