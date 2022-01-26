@@ -83,6 +83,7 @@ dependencies:
   - executing=0.8.2
   - expat=2.4.3
   - ffmpeg=4.2.3
+  - ffmpeg-python
   - flit-core=3.6.0
   - font-ttf-dejavu-sans-mono=2.37
   - font-ttf-inconsolata=3.000
