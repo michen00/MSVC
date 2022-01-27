@@ -5,7 +5,7 @@ import streamlit as st
 
 
 @st.experimental_singleton
-def load_frill_module() -> None:
+def load_frill_module():
     """returns the FRILL module as a tensorflow _UserObject"""
     with st.spinner("thank you for your patience..."):
         import tensorflow.compat.v2 as tf
