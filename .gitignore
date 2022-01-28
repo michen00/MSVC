@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-requirements.txt
 .pytest_cache/
 .pytest_cache/*
 __pycache__/
 __pycache__/*
-=======
-msvc_pk
-msvc_pk.pub
-requirements.txt
-.pytest_cache/
-.pytest_cache/*
-__pycache__/
-__pycache__/*
->>>>>>> 7653142f3135c6475adc055d5424e8cba0e383ef

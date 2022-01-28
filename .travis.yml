@@ -17,11 +17,9 @@ jobs:
         - wget -qO- https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
         - eval "$(./bin/micromamba shell hook -s posix)"
         - source ~/.bashrc
-        - micromamba env create -f environment.yml -y
+        - micromamba env create -f requirements.yml -y
         - micromamba activate msvc_env_mm
-        - PATH=$(pwd):$PATH
       install:
-        - python -m pip install -e .
         - micromamba install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
       script:
         - python --version
