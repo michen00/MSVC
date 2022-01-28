@@ -12,7 +12,7 @@ def load_frill_module():
         import tensorflow as tf
         import tensorflow_hub as hub
 
-        tf.enable_v2_behavior()
+        # tf.enable_v2_behavior()
         frill_path = "msvc/src/features/FRILL"
         # frill_path = "https://tfhub.dev/google/nonsemantic-speech-benchmark/frill/1"
         return hub.load(frill_path)
