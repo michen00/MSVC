@@ -152,7 +152,7 @@ requests-oauthlib==1.3.0
 rsa==4.8
 s3transfer==0.5.0
 scikit-learn==1.0.2
-scikit-learn-intelex==2021.20211123.141417
+scikit-learn-intelex==2021.4.0
 scipy==1.7.3
 seaborn==0.11.2
 Send2Trash==1.8.0
