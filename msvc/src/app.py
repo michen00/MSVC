@@ -156,6 +156,21 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    with st.expander("about", expanded=False):
+        st.write(
+            """
+The machine learning model is a passthrough stacked ensemble of a ridge classifier and
+a bagged Gaussian Naive Bayes classifier with a logistic regression as the meta-estimator. 
+The model is trained on the 
+[FRILL embeddings](https://tfhub.dev/google/lite-model/nonsemantic-speech-benchmark/frill/1) 
+of over 72 hours of audio in 10 different languages (primarily 
+[this dataset](https://github.com/michen00/unified_multilingual_dataset_of_emotional_human_utterances))
+. Source code is available on [my GitHub](https://github.com/michen00/MSVC). If you'd like to 
+hire me, here is my [resume](https://bit.ly/michen_resume) and my 
+[LinkedIn profile](https://www.linkedin.com/in/michaelchen0/).
+
+            """
+        )
     with st.expander("disclaimer", expanded=False):
         st.write(
             """
