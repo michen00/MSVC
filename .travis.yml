@@ -20,7 +20,7 @@ jobs:
         - micromamba env create --files requirements.yml --yes
         - micromamba activate msvc_env_mm
       install:
-        - micromamba install codecov pytest pytest-cov pytest-mpl -c conda-forge -y
+        - micromamba install -y codecov pytest pytest-cov pytest-mpl -c conda-forge
       script:
         - python --version
         - python -m pytest --cov=msvc/src msvc/tests --mpl
