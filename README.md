@@ -13,11 +13,13 @@ To run the app locally:
 
 Try the app on [Streamlit Cloud](https://bit.ly/MSVC_app).
 
-The training data consists of data collected by the [Unified Multilingual Dataset of Emotional Human Utterances](https://github.com/michen00/unified_multilingual_dataset_of_emotional_human_utterances) [1] as well as subsets of [2], [3], and [4].
+The training data consists of FRILL embeddings [1] derived from datasets collected by the [Unified Multilingual Dataset of Emotional Human Utterances](https://github.com/michen00/unified_multilingual_dataset_of_emotional_human_utterances) [2] as well as subsets of [3], [4], and [5].
+
+1. J. Peplinski, J. Shor, S. Joglekar, J. Garrison, and S. Patel, "FRILL: A non-semantic speech embedding for mobile devices," in *Proc. INTERSPEECH 2021*, Brno, Czech Republic, Aug. 30–Sep. 3, 2021, pp. 1204–1208. Accessed: Feb. 1, 2022. doi: https://doi.org/10.21437/Interspeech.2021-2070.
 
 1. M. I. Chen. "Unified multilingual dataset of emotional human utterances. V0.1.0." Github. Accessed: Jan. 29, 2022. [Online]. Available: https://github.com/michen00/unified_multilingual_dataset_of_emotional_human_utterances
 
-1. T. Müller and D. Kreutz, *Thorsten - Open German Voice (Emotional) Dataset. V2.0.* June 13, 2021. Distributed by Zenodo. Accessed: Jan. 29, 2022. [Dataset]. doi: https://doi.org/10.5281/zenodo.5525023.
+1. T. Müller and D. Kreutz, *Thorsten - Open German Voice (Emotional) Dataset. V2.0.* Jun. 13, 2021. Distributed by Zenodo. Accessed: Jan. 29, 2022. [Dataset]. doi: https://doi.org/10.5281/zenodo.5525023.
 
 1. A. Rockikz. "Speech Emotion Recognition. 914ecac." Github. Accessed: Jan. 29, 2022. [Online]. Available: https://github.com/x4nth055/emotion-recognition-using-speech
 
