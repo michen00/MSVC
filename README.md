@@ -1,3 +1,5 @@
+This app detects whether a human speech utterance is colored with negative, neutral, or positive emotional valence.
+
 To setup the environment:
 
     conda activate base
