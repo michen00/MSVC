@@ -1,4 +1,4 @@
-This app detects whether a human speech utterance is colored with negative, neutral, or positive emotional valence.
+This app detects whether a human speech utterance is colored with negative, neutral, or positive emotional valence. Try the app on [Streamlit Cloud](https://bit.ly/MSVC_app).
 
 To setup the environment:
 
@@ -12,8 +12,6 @@ To setup the environment:
 To run the app locally:
 
     streamlit run msvc/src/app.py
-
-Try the app on [Streamlit Cloud](https://bit.ly/MSVC_app).
 
 The training data consists of FRILL embeddings [1] derived from datasets collected by the [Unified Multilingual Dataset of Emotional Human Utterances](https://github.com/michen00/unified_multilingual_dataset_of_emotional_human_utterances) [2] as well as subsets of [3], [4], and [5].
 
