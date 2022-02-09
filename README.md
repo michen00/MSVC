@@ -5,7 +5,7 @@ To setup the environment:
     conda activate base
     conda update conda -c conda-forge -y
     conda remove --name msvc_env_mm --all -c conda-forge -y
-    conda env create -f environment.yml
+    conda env create -f requirements.yml
     conda activate msvc_env_mm
     python -m pip install -e .
 
