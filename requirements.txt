@@ -129,7 +129,7 @@ pydeck==0.5.0
 pydub==0.25.1
 pyee==9.0.3
 Pygments==2.15.0
-PyJWT==2.3.0
+PyJWT==2.4.0
 pylibsrtp==0.7.0
 Pympler==0.9
 pyOpenSSL==21.0.0
