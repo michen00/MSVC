@@ -128,7 +128,7 @@ pycparser==2.21
 pydeck==0.5.0
 pydub==0.25.1
 pyee==9.0.3
-Pygments==2.11.2
+Pygments==2.15.0
 PyJWT==2.3.0
 pylibsrtp==0.7.0
 Pympler==0.9
