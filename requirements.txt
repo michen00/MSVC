@@ -34,7 +34,7 @@ charset-normalizer==2.0.10
 click==8.0.3
 cloudpickle==2.0.0
 colorama==0.4.4
-cryptography==41.0.6
+cryptography==42.0.4
 cycler==0.11.0
 cytoolz==0.11.2
 daal4py==2021.4.0
