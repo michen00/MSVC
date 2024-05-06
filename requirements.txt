@@ -195,7 +195,7 @@ validators==0.18.2
 watchdog==2.1.6
 wcwidth==0.2.5
 webencodings==0.5.1
-Werkzeug==2.3.8
+Werkzeug==3.0.3
 wheel==0.38.1
 widgetsnbextension==3.5.2
 wrapt==1.12.1
