@@ -190,7 +190,7 @@ typing-extensions==3.7.4.3
 tzdata==2021.5
 tzlocal==4.1
 unicodedata2==14.0.0
-urllib3==1.26.18
+urllib3==1.26.19
 validators==0.18.2
 watchdog==2.1.6
 wcwidth==0.2.5
